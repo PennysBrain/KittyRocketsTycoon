@@ -247,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &81940133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -723,7 +723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &397549532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1121,8 +1121,9 @@ GameObject:
   - component: {fileID: 838997643}
   - component: {fileID: 838997646}
   - component: {fileID: 838997647}
+  - component: {fileID: 838997645}
   m_Layer: 0
-  m_Name: EventManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1165,6 +1166,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 838997647}
+        m_MethodName: Spawn
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &838997644
@@ -1180,6 +1192,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838997645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838997642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a673530d4968f4b9ff27540034a671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeveloperDescription: 
+  Event: {fileID: 11400000, guid: 88b350f17069a8342a4de8c45c75ef79, type: 2}
+  ActiveatStart: 0
+  ResetTimer:
+    UseConstant: 0
+    ConstantValue: 3.5
+    Variable: {fileID: 11400000, guid: 0e25db9c0c7fbd145b2abe9fb893585b, type: 2}
+  currentTime: 0
+  saveCurrentTime: 1
+  CurrentTimerSave:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 8ae501e904c8a2847827873e23f3aecc, type: 2}
 --- !u!114 &838997646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,80 +1385,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1023047532}
   m_CullTransparentMesh: 0
---- !u!1001 &1028842572
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114609072353075214, guid: 295efb37be8c63d4a8d324d97aad3cec,
-        type: 2}
-      propertyPath: saveCurrentTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114609072353075214, guid: 295efb37be8c63d4a8d324d97aad3cec,
-        type: 2}
-      propertyPath: CurrentTimerSave.UseConstant
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114609072353075214, guid: 295efb37be8c63d4a8d324d97aad3cec,
-        type: 2}
-      propertyPath: CurrentTimerSave.Variable
-      value: 
-      objectReference: {fileID: 11400000, guid: 8ae501e904c8a2847827873e23f3aecc,
-        type: 2}
-    - target: {fileID: 114609072353075214, guid: 295efb37be8c63d4a8d324d97aad3cec,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114609072353075214, guid: 295efb37be8c63d4a8d324d97aad3cec,
-        type: 2}
-      propertyPath: ResetTimer.UseConstant
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114609072353075214, guid: 295efb37be8c63d4a8d324d97aad3cec,
-        type: 2}
-      propertyPath: ResetTimer.Variable
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e25db9c0c7fbd145b2abe9fb893585b,
-        type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1206344840
 GameObject:
   m_ObjectHideFlags: 0

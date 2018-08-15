@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114591094971448292}
   - component: {fileID: 114701932312788658}
   - component: {fileID: 54256531678725848}
-  - component: {fileID: 114609072353075214}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -127,25 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RuntimeSet: {fileID: 11400000, guid: 1d68b7abe0af488419036b9066a8a344, type: 2}
---- !u!114 &114609072353075214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1738092313295994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a673530d4968f4b9ff27540034a671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Event: {fileID: 11400000, guid: 88b350f17069a8342a4de8c45c75ef79, type: 2}
-  ActiveatStart: 0
-  ResetTimer:
-    UseConstant: 1
-    ConstantValue: 3.5
-    Variable: {fileID: 0}
-  currentTime: 0
 --- !u!114 &114701932312788658
 MonoBehaviour:
   m_ObjectHideFlags: 1
