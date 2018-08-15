@@ -30,10 +30,12 @@ namespace WARMachine.Events
         void Update()
         {
             currentTime -= Time.deltaTime;
+
             if (saveCurrentTime)
             {
                 CurrentTimerSave.Variable.Value = currentTime;
             }
+
             if (currentTime < 0)
             {
                 ActivateEvent();
