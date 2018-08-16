@@ -1130,12 +1130,12 @@ GameObject:
   - component: {fileID: 609262788}
   - component: {fileID: 609262792}
   m_Layer: 0
-  m_Name: walls
+  m_Name: walls-Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &609262788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1332,6 +1332,7 @@ GameObject:
   - component: {fileID: 838997647}
   - component: {fileID: 838997645}
   - component: {fileID: 838997648}
+  - component: {fileID: 838997649}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1384,6 +1385,17 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 5181ba3f63816fc42a17b9d26f640133, type: 2}
+        m_MethodName: SetValue
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 20
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1487,8 +1499,8 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159707253}
-        m_MethodName: Lauch
+      - m_Target: {fileID: 838997649}
+        m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1500,6 +1512,27 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &838997649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838997642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cf67df56575ba498890557c79426a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e97cdb8bccf308349a77a75a465b6648, type: 2}
+  ActivateEvent: 0
+  A:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: b8e31929eef6a6e4d9d82400197e3c23, type: 2}
+  B:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 5181ba3f63816fc42a17b9d26f640133, type: 2}
 --- !u!1 &1023047532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,10 +1565,10 @@ RectTransform:
   m_Father: {fileID: 587526655}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369, y: -236.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 81, y: 17}
+  m_SizeDelta: {x: 160, y: 29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023047534
 MonoBehaviour:
@@ -1576,7 +1609,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e97cdb8bccf308349a77a75a465b6648, type: 2}
+      - m_Target: {fileID: 11400000, guid: bc0278e8a14ca0648a379ff401b543ae, type: 2}
         m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
