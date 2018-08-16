@@ -31,7 +31,7 @@ namespace WARMachine.Sets.Things
 
         private void UpdateText()
         {
-            Text.text = "There are " + Set.items.Count + " things in this collection";
+            Text.text = "There is " + Set.items.Count + " Ships monitor";
         }
     }
 }
