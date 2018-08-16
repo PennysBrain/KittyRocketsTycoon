@@ -431,6 +431,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8f532cc778358b4790ed9b24ad9ab7d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &159707245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1738092313295994, guid: 295efb37be8c63d4a8d324d97aad3cec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1984500045}
+--- !u!114 &159707253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159707245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99879f249db58a41aa52f197241866e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destination:
+    UseConstant: 1
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  CurrentLocation:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 1d80adf2415b8ac468e250cdd310ccab, type: 2}
+  StartLaunch:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ReachDestination:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  slider: 0
+  Timer:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 8ae501e904c8a2847827873e23f3aecc, type: 2}
+  SavedTimer: 0
+  SavedLocation: 0
 --- !u!1 &165976228
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,11 +747,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &300679990 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec,
-    type: 2}
-  m_PrefabInternal: {fileID: 1984500045}
 --- !u!1 &397549531
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +836,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 397549531}
   m_CullTransparentMesh: 0
+--- !u!1 &547556905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 562226204}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458139732}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &562226204
 Prefab:
   m_ObjectHideFlags: 0
@@ -938,6 +989,20 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81154777d5417884981849c5243f6c01, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &562226205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 562226204}
+  m_GameObject: {fileID: 1189219931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1458139732}
+  m_Father: {fileID: 587526655}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587526651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,7 +1096,7 @@ RectTransform:
   - {fileID: 63909720}
   - {fileID: 1597356805}
   - {fileID: 1023047533}
-  - {fileID: 1458139732}
+  - {fileID: 562226205}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1350,7 +1415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeveloperDescription: 
   Event: {fileID: 11400000, guid: 88b350f17069a8342a4de8c45c75ef79, type: 2}
-  ActiveatStart: 0
+  ActivateEventOnStart: 0
   ResetTimer:
     UseConstant: 0
     ConstantValue: 3.5
@@ -1395,7 +1460,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 838997642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e95a34dd59e02124fb4a4160bcb592f6, type: 3}
   m_Name: 
@@ -1422,9 +1487,9 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1395279360}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 159707253}
+        m_MethodName: Lauch
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1435,27 +1500,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &924086734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1909726635822092, guid: e8f532cc778358b4790ed9b24ad9ab7d,
-    type: 2}
-  m_PrefabInternal: {fileID: 105866237}
---- !u!114 &924086740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 924086734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76806479d916a64aa03f8e3eba7912f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 300679990}
-  distance: 10
-  height: 5
-  rotationDamping: 0
-  heightDamping: 0
 --- !u!1 &1023047532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1623,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1023047532}
   m_CullTransparentMesh: 0
+--- !u!1 &1189219931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 562226204}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562226205}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1206344840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,11 +1835,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!224 &1458139732 stripped
+--- !u!224 &1458139732
 RectTransform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 22409990, guid: 81154777d5417884981849c5243f6c01,
     type: 2}
   m_PrefabInternal: {fileID: 562226204}
+  m_GameObject: {fileID: 547556905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 562226205}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1524002357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,11 +2388,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.65
+      value: -3.49
       objectReference: {fileID: 0}
     - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.996
       objectReference: {fileID: 0}
     - target: {fileID: 4843320128530740, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2348,9 +2421,21 @@ Prefab:
     - target: {fileID: 114701932312788658, guid: 295efb37be8c63d4a8d324d97aad3cec,
         type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54256531678725848, guid: 295efb37be8c63d4a8d324d97aad3cec,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65593446965912476, guid: 295efb37be8c63d4a8d324d97aad3cec,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 54256531678725848, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
+    - {fileID: 114701932312788658, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 295efb37be8c63d4a8d324d97aad3cec, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &2092193680

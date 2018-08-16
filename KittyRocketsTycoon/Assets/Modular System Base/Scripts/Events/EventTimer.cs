@@ -13,15 +13,27 @@ namespace WARMachine.Events
         [Tooltip("Event To Raise")]
         public GameEvent Event;
 
-        public bool ActiveatStart;
+        public bool ActivateEventOnStart;
+
+        [Header("Timers Variables")]
         public FloatReference ResetTimer;
         public float currentTime;
         public bool saveCurrentTime = false;
         public FloatReference CurrentTimerSave;
         // Use this for initialization
-        void Start()
+        void Awake()
         {
-            if (ActiveatStart)
+            currentTime = ResetTimer;//We Where forgetting to reset timer
+            if (saveCurrentTime)
+            {
+                CurrentTimerSave.Variable.SetValue(currentTime);
+            }
+        }
+
+        //Used For Talking With Componets
+        private void Start()
+        {
+            if (ActivateEventOnStart)
             {
                 ActivateEvent();
             }
@@ -39,7 +51,6 @@ namespace WARMachine.Events
             if (currentTime < 0)
             {
                 ActivateEvent();
-                Debug.Log("THIS HAPPPENS");
                 currentTime = ResetTimer;
             }
         }
