@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WARMachine.Variables;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -8,19 +9,24 @@ public class DragAndDrop : MonoBehaviour
     public float speed;
     public float yBuffer;
     public bool dragAndDrop;
-
+    //public bool savedLovation;
+    public FloatReference SaveLocationX;
+    
    // public Renderer rend;
 
     void Start()
     {
         //rend = GetComponent<Renderer>();
+        yBuffer = yBuffer + transform.position.y;
     }
     // Update is called once per frame
     void Update ()
     {
         if(dragAndDrop)
             FollowMouse();
-	}
+        
+
+    }
 
     void FollowMouse()
     {
@@ -31,8 +37,14 @@ public class DragAndDrop : MonoBehaviour
             mousePosition.x - transform.position.x,
             mousePosition.y - transform.position.y);
 
-        this.transform.up = direction;//small rotation
-        this.transform.position = new Vector3(Mathf.Lerp(mousePosition.x, transform.position.x, Time.deltaTime * speed), Mathf.Lerp(mousePosition.y, transform.position.y, Time.deltaTime * speed) + yBuffer, transform.position.z);//smooth follow
+        // this.transform.up = direction;//small rotation
+        
+        this.transform.position = new Vector3(Mathf.Lerp(mousePosition.x, transform.position.x, Time.deltaTime * speed),  yBuffer, transform.position.z);//smooth follow x follow
+                                                                                                                                                         
+        //    this.transform.position = new Vector3(Mathf.Lerp(mousePosition.x, transform.position.x, Time.deltaTime * speed), Mathf.Lerp(mousePosition.y, transform.position.y, Time.deltaTime * speed) + yBuffer, transform.position.z);//smooth follow
+        if (SaveLocationX !=0)
+            SaveLocationX.Variable.Value = transform.position.x;
+
     }
 
     private void OnMouseDrag()
