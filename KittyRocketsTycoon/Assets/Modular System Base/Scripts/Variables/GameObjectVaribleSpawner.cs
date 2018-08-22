@@ -13,6 +13,7 @@ namespace WARMachine.Variables
         public GameObject Prefab;
         public FloatReference FloatReference;
         public bool SpawnAtStart;
+        public GameObject spawnPoint;
         // Use this for initialization
         void Start()
         {
@@ -27,7 +28,11 @@ namespace WARMachine.Variables
         {
             for (float i = amount; i > 0; i--)
             {
-                Instantiate(Prefab, new Vector3(i * 2.0F, 0, 0), Quaternion.identity);
+                if(spawnPoint!=null)
+                    Instantiate(Prefab, new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, spawnPoint.transform.position.z), Quaternion.identity);
+                else
+                    Instantiate(Prefab, new Vector3(0,0,0), Quaternion.identity);
+
             }
         }
     }

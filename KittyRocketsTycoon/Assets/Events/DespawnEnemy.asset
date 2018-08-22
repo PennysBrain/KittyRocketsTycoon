@@ -8,8 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bdd9c15858a0754dbda63cd0de3c8b1, type: 3}
-  m_Name: MaxSectorTime
+  m_Script: {fileID: 11500000, guid: 0705b37ac9909fc489a02d32a8bf2ebf, type: 3}
+  m_Name: DespawnEnemy
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 5

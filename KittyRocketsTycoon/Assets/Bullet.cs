@@ -8,6 +8,11 @@ public class Bullet : MonoBehaviour
     public FloatReference ShipPosition;
     public float spawnXPosition;
     // Use this for initialization
+    void Awake()
+    {
+        spawnXPosition = ShipPosition.Value;
+    }
+
     void Start ()
     {
 		

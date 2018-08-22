@@ -188,6 +188,7 @@ MonoBehaviour:
     ConstantValue: 1
     Variable: {fileID: 0}
   SpawnAtStart: 0
+  spawnPoint: {fileID: 1719185490670428}
 --- !u!114 &114360099430568588
 MonoBehaviour:
   m_ObjectHideFlags: 1

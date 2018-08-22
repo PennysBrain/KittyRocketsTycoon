@@ -1509,6 +1509,22 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: a1b811e9963ec4f4986fba3137839359,
         type: 2}
+    - target: {fileID: 114222414315529534, guid: 22aa444bf4f1c134594f22f783ddfb4e,
+        type: 2}
+      propertyPath: ResetTimer.ConstantValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222414315529534, guid: 22aa444bf4f1c134594f22f783ddfb4e,
+        type: 2}
+      propertyPath: ResetTimer.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114222414315529534, guid: 22aa444bf4f1c134594f22f783ddfb4e,
+        type: 2}
+      propertyPath: ResetTimer.Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: c30a2f4769a408b4b841f6efec94016c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22aa444bf4f1c134594f22f783ddfb4e, type: 2}
   m_IsPrefabAsset: 0
