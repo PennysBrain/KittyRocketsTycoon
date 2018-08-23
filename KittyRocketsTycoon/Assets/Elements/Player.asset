@@ -8,8 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bdd9c15858a0754dbda63cd0de3c8b1, type: 3}
-  m_Name: ShipValue
+  m_Script: {fileID: 11500000, guid: dc9abf0b643f7074ca7427d6b91c780a, type: 3}
+  m_Name: Player
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 20
+  DefeatedElements:
+  - {fileID: 11400000, guid: 85518a3443543bc409dc0b68f7434e41, type: 2}
+  - {fileID: 11400000, guid: 8cd05fc8a6aa97446b2a1298153cbf35, type: 2}

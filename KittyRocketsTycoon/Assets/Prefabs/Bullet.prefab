@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 23920039626158690}
   - component: {fileID: 135232000026648896}
   - component: {fileID: 114252304403757054}
-  - component: {fileID: 114532196766895408}
-  - component: {fileID: 114386783526474074}
+  - component: {fileID: 114830562371254880}
+  - component: {fileID: 54790216957313676}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -87,6 +87,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312870573232334}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54790216957313676
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312870573232334}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114252304403757054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,7 +122,7 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1d80adf2415b8ac468e250cdd310ccab, type: 2}
   spawnXPosition: 0
---- !u!114 &114386783526474074
+--- !u!114 &114830562371254880
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,50 +130,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1312870573232334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef097dd6c3d233c43b410f955ec70b02, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c48c547997f9c748b148d6cbfe10000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 03d98197a29229146a0c614f297e121b, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1312870573232334}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114532196766895408
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1312870573232334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a673530d4968f4b9ff27540034a671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Event: {fileID: 11400000, guid: 03d98197a29229146a0c614f297e121b, type: 2}
-  ActivateEventOnStart: 0
-  ResetTimer:
-    UseConstant: 1
-    ConstantValue: 2
-    Variable: {fileID: 0}
-  currentTime: 0
-  saveCurrentTime: 0
-  CurrentTimerSave:
-    UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
+  Element: {fileID: 11400000, guid: f2f35fb7afbe10f42bba4479bb6a4f70, type: 2}
+  Lable: {fileID: 0}
 --- !u!135 &135232000026648896
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -166,7 +142,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312870573232334}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
