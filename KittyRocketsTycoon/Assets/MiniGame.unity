@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2165,11 +2165,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114697525582510242, guid: 61a58564d0806234e9da6f8956d920d8,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4563151295192532, guid: 61a58564d0806234e9da6f8956d920d8, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.49
@@ -2202,26 +2197,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114360099430568588, guid: 61a58564d0806234e9da6f8956d920d8,
-        type: 2}
-      propertyPath: UIGameObject
-      value: 
-      objectReference: {fileID: 593306778}
     - target: {fileID: 114008959169824504, guid: 61a58564d0806234e9da6f8956d920d8,
         type: 2}
       propertyPath: UIGameObject
       value: 
       objectReference: {fileID: 1890111171}
+    - target: {fileID: 114360099430568588, guid: 61a58564d0806234e9da6f8956d920d8,
+        type: 2}
+      propertyPath: UIGameObject
+      value: 
+      objectReference: {fileID: 593306778}
     - target: {fileID: 114697525582510242, guid: 61a58564d0806234e9da6f8956d920d8,
         type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697525582510242, guid: 61a58564d0806234e9da6f8956d920d8,
-        type: 2}
-      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 838997651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61a58564d0806234e9da6f8956d920d8, type: 2}
   m_IsPrefabAsset: 0

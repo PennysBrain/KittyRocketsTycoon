@@ -18,6 +18,8 @@ public class DragAndDrop : MonoBehaviour
     {
         //rend = GetComponent<Renderer>();
         yBuffer = yBuffer + transform.position.y;
+        if (SaveLocationX != 0)
+            SaveLocationX.Variable.Value = transform.position.x;
     }
     // Update is called once per frame
     void Update ()
