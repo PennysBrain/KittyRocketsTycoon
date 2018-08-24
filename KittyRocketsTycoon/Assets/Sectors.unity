@@ -1906,12 +1906,12 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 3.5
     Variable: {fileID: 11400000, guid: 0e25db9c0c7fbd145b2abe9fb893585b, type: 2}
-  currentTime: 0
-  saveCurrentTime: 1
+  currentTime: NaN
+  saveCurrentTime: 0
   CurrentTimerSave:
-    UseConstant: 0
+    UseConstant: 1
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 8ae501e904c8a2847827873e23f3aecc, type: 2}
+    Variable: {fileID: 0}
 --- !u!114 &838997646
 MonoBehaviour:
   m_ObjectHideFlags: 0
