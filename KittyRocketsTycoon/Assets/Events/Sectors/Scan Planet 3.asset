@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0705b37ac9909fc489a02d32a8bf2ebf, type: 3}
-  m_Name: Scan Planet
+  m_Name: Scan Planet 3
   m_EditorClassIdentifier: 

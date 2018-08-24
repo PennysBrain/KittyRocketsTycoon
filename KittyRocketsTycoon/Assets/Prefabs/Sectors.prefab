@@ -130,15 +130,15 @@ MonoBehaviour:
   Event: {fileID: 11400000, guid: 1a1a75f39641a6040977dabed6cc5d51, type: 2}
   ActivateEventOnStart: 0
   ResetTimer:
-    UseConstant: 1
-    ConstantValue: 20
-    Variable: {fileID: 0}
+    UseConstant: 0
+    ConstantValue: 5
+    Variable: {fileID: 11400000, guid: c30a2f4769a408b4b841f6efec94016c, type: 2}
   currentTime: 0
-  saveCurrentTime: 0
+  saveCurrentTime: 1
   CurrentTimerSave:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: a1b811e9963ec4f4986fba3137839359, type: 2}
 --- !u!114 &114885646677368212
 MonoBehaviour:
   m_ObjectHideFlags: 1

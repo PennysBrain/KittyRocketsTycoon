@@ -18,7 +18,7 @@ public class DragAndDrop : MonoBehaviour
     {
         //rend = GetComponent<Renderer>();
         yBuffer = yBuffer + transform.position.y;
-        if (SaveLocationX != 0)
+        if (SaveLocationX != null)
             SaveLocationX.Variable.Value = transform.position.x;
     }
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class DragAndDrop : MonoBehaviour
         this.transform.position = new Vector3(Mathf.Lerp(mousePosition.x, transform.position.x, Time.deltaTime * speed),  yBuffer, transform.position.z);//smooth follow x follow
                                                                                                                                                          
         //    this.transform.position = new Vector3(Mathf.Lerp(mousePosition.x, transform.position.x, Time.deltaTime * speed), Mathf.Lerp(mousePosition.y, transform.position.y, Time.deltaTime * speed) + yBuffer, transform.position.z);//smooth follow
-        if (SaveLocationX !=0)
+        if (SaveLocationX != null)
             SaveLocationX.Variable.Value = transform.position.x;
 
     }

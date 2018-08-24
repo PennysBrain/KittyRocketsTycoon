@@ -1746,7 +1746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1023047533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2197,21 +2197,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114008959169824504, guid: 61a58564d0806234e9da6f8956d920d8,
-        type: 2}
-      propertyPath: UIGameObject
-      value: 
-      objectReference: {fileID: 1890111171}
-    - target: {fileID: 114360099430568588, guid: 61a58564d0806234e9da6f8956d920d8,
-        type: 2}
-      propertyPath: UIGameObject
-      value: 
-      objectReference: {fileID: 593306778}
     - target: {fileID: 114697525582510242, guid: 61a58564d0806234e9da6f8956d920d8,
         type: 2}
       propertyPath: DeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 838997651}
+    - target: {fileID: 114360099430568588, guid: 61a58564d0806234e9da6f8956d920d8,
+        type: 2}
+      propertyPath: UIGameObject
+      value: 
+      objectReference: {fileID: 593306778}
+    - target: {fileID: 114008959169824504, guid: 61a58564d0806234e9da6f8956d920d8,
+        type: 2}
+      propertyPath: UIGameObject
+      value: 
+      objectReference: {fileID: 1890111171}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61a58564d0806234e9da6f8956d920d8, type: 2}
   m_IsPrefabAsset: 0
