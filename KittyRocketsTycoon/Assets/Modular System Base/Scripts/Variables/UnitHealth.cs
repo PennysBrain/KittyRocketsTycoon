@@ -15,6 +15,11 @@ namespace WARMachine.Variables
         public UnityEvent DeathEvent;
 
         // Use this for initialization
+        private void Awake()
+        {
+            if (HP == null)
+                HP = ScriptableObject.CreateInstance("FloatVariable") as FloatVariable;
+        }
         private void Start()
         {
             if (ResetHP)

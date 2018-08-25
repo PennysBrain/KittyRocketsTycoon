@@ -28,6 +28,8 @@ GameObject:
   - component: {fileID: 114217187658150426}
   - component: {fileID: 54081722587288598}
   - component: {fileID: 114675118108154290}
+  - component: {fileID: 114025641276875804}
+  - component: {fileID: 114329796486858212}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -105,6 +107,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114025641276875804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940964971886806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ca345858642554a942a5c9a3dcb48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: {fileID: 0}
+  ResetHP: 1
+  StartingHP:
+    UseConstant: 1
+    ConstantValue: 2
+    Variable: {fileID: 0}
+  DamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114329796486858212}
+        m_MethodName: Spawn
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1940964971886806}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114151336436038952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,6 +217,25 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1d80adf2415b8ac468e250cdd310ccab, type: 2}
   spawnXPosition: 0
+--- !u!114 &114329796486858212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940964971886806}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95a34dd59e02124fb4a4160bcb592f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeveloperDescription: 
+  Prefab: {fileID: 1740330069245994, guid: 8329e03f17cec7345bf6f8c034b28994, type: 2}
+  FloatReference:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  SpawnAtStart: 0
+  spawnPoint: {fileID: 1940964971886806}
 --- !u!114 &114348524413641404
 MonoBehaviour:
   m_ObjectHideFlags: 1

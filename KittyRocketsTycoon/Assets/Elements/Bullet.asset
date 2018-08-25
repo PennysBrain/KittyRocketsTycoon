@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   DefeatedElements:
-  - {fileID: 11400000, guid: 8cd05fc8a6aa97446b2a1298153cbf35, type: 2}
   - {fileID: 11400000, guid: 85518a3443543bc409dc0b68f7434e41, type: 2}
