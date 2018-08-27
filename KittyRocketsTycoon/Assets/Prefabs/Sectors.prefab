@@ -11,6 +11,22 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1115692439192704}
   m_IsPrefabAsset: 1
+--- !u!1 &1097587838839346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4296692462799816}
+  - component: {fileID: 114354863288793152}
+  m_Layer: 0
+  m_Name: DroneScanTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1115692439192704
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4651276810598372}
   - component: {fileID: 114885646677368212}
+  - component: {fileID: 114769426780500742}
   m_Layer: 0
   m_Name: HealthBadge (1)
   m_TagString: Untagged
@@ -57,8 +74,22 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4651276810598372}
+  - {fileID: 4296692462799816}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4296692462799816
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097587838839346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4026496993312722}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4651276810598372
 Transform:
@@ -139,6 +170,42 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: a1b811e9963ec4f4986fba3137839359, type: 2}
+--- !u!114 &114354863288793152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097587838839346}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a673530d4968f4b9ff27540034a671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeveloperDescription: 
+  Event: {fileID: 11400000, guid: 2d36d8d919204e64ea0cd72a42502c52, type: 2}
+  ActivateEventOnStart: 0
+  ResetTimer:
+    UseConstant: 1
+    ConstantValue: 5
+    Variable: {fileID: 0}
+  currentTime: 0
+  saveCurrentTime: 1
+  CurrentTimerSave:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 35ac2f9eb30a19d49ad7088a9f340000, type: 2}
+--- !u!114 &114769426780500742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120422607747086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20474b229d9509c45b1695386d240893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIGameObject: {fileID: 0}
 --- !u!114 &114885646677368212
 MonoBehaviour:
   m_ObjectHideFlags: 1

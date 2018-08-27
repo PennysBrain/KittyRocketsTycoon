@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bdd9c15858a0754dbda63cd0de3c8b1, type: 3}
-  m_Name: PlayerMaxHealth
+  m_Name: DroidScanOnPlanet
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 2
+  DeveloperDescription: Keep Track of witch Planet is being scan by the droid
+  Value: 1
