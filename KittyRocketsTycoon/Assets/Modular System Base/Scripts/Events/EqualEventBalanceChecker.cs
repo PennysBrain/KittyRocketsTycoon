@@ -3,8 +3,10 @@ using WARMachine.Variables;
 
 namespace WARMachine.Events
 {
-    public class EventBalanceCheck : MonoBehaviour
+    public class EqualEventBalanceChecker : MonoBehaviour
     {
+
+
         [Tooltip("Event To Raise If A > B")]
         public GameEvent Event;
 
@@ -15,13 +17,13 @@ namespace WARMachine.Events
 
 
         // Use this for initialization
-       public void Activate()
+        public void Activate()
         {
-            if (A.Value >= B.Value)
+            if (A.Value == B.Value)
                 Event.Raise();
             else
             {
-                Debug.Log("not enough " + A.Value.ToString() +" >= "+ B.Value.ToString());
+                Debug.Log("Same " + A.Value.ToString() + " == " + B.Value.ToString());
             }
         }
     }
