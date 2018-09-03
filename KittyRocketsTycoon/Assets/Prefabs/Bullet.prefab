@@ -215,7 +215,7 @@ MonoBehaviour:
     ConstantValue: 12
     Variable: {fileID: 0}
   ShipPosition:
-    UseConstant: 0
+    UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 1d80adf2415b8ac468e250cdd310ccab, type: 2}
   spawnXPosition: 0

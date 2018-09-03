@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using WARMachine.Variables;
 
-public class DragAndDrop : MonoBehaviour
+public class Drag : MonoBehaviour
 {
 
     public float speed;

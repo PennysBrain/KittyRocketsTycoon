@@ -8,21 +8,28 @@ public class Bullet : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        spawnXPosition = ShipPosition.Value;
+        GetPosition();//Call this in Awake OnEnable is not called on Windows Build
     }
-
-    void Start ()
-    {
-		
-	}
 
     private void OnEnable()
     {
-        spawnXPosition = ShipPosition.Value;
+        GetPosition();
     }
+
     // Update is called once per frame
     void Update ()
     {
         transform.position = new Vector3(spawnXPosition, transform.position.y + Speed.Value * Time.deltaTime, transform.position.z);	
 	}
+
+    void GetPosition()
+    {
+        if (ShipPosition == 0)
+        {
+            spawnXPosition = this.transform.position.x;
+            Debug.Log("Call this");
+        }
+        else
+            spawnXPosition = ShipPosition.Value;
+    }
 }
