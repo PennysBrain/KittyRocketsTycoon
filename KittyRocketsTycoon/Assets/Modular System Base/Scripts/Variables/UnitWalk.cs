@@ -4,61 +4,57 @@ using UnityEngine;
 using UnityEngine.Events;
 namespace WARMachine.Variables
 {
-    public class UnitLaunch : MonoBehaviour
+    public class UnitWalk : MonoBehaviour
     {
         public FloatReference Destination;
         public FloatReference CurrentLocation;
         public UnityEvent StartLaunch;
         public UnityEvent ReachDestination;
 
+       // public bool pingPong;
+       public bool flip;
         [Range(0,1)]
         public float slider;
         public FloatReference Timer;
 
         public float SavedTimer;
         public float SavedLocation;
-        public bool flip;
-        Vector3 current;
-        Vector3 destination;
 
         private void Start()
         {
-            CurrentLocation.Variable.SetValue(this.transform.position.x);
+            CurrentLocation.Variable.SetValue(this.transform.position.y);
             SavedLocation = CurrentLocation.Value;
             SavedTimer = Timer.Variable.Value;
-
-             current = new Vector3(transform.position.x, CurrentLocation.Value, transform.position.z);
-             destination = new Vector3(transform.position.x, Destination.Value, transform.position.z);
         }
 
         private void Update()
         {
-            //CurrentLocation.Variable.SetValue(this.transform.position.x);
-
-            
-           
-
+            Vector3 current = new Vector3(CurrentLocation.Value, transform.position.y, transform.position.z);
+            Vector3 destination = new Vector3( Destination.Value, transform.position.y, transform.position.z);
+            slider = Timer.Value /SavedTimer; //Slider lerp 
             if (!flip)
             {
                 transform.position = Vector3.Lerp(destination, current, slider);
+
+
             }
-            if (flip)
+            if(flip)
             {
-                transform.position = Vector3.Lerp(current, destination, slider);
+               
+                    transform.position = Vector3.Lerp(current, destination, slider);
+                
             }
-            slider = Timer.Value / SavedTimer; //Slider lerp 
             //CurrentLocation.Variable.SetValue( transform.position.y);
         }
         // Update is called once per frame
-        public void Lauch()
+        public void Walk()
         {
             StartLaunch.Invoke();
-            ReachDestination.Invoke();
         }
 
         public void Flip()
         {
-            flip = !flip;
+            flip = !flip; 
         }
     }
 }

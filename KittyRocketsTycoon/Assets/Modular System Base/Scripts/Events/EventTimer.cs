@@ -48,16 +48,17 @@ namespace WARMachine.Events
                 CurrentTimerSave.Variable.Value = currentTime;
             }
 
-            if (currentTime < 0)
+            if (currentTime <= 0)
             {
                 ActivateEvent();
-                currentTime = ResetTimer;
             }
         }
 
         void ActivateEvent()
         {
             Event.Raise();
+            currentTime = ResetTimer;
+
         }
     }
 }

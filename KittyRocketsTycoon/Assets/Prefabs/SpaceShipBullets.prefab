@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 54220336569854092}
   - component: {fileID: 114697525582510242}
   m_Layer: 0
-  m_Name: SpaceShip
+  m_Name: SpaceShipBullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
